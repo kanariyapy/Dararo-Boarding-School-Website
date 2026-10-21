@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Staff login | Our School</title><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+  <header class="site-header"><a class="brand" href="/">Our School</a><nav aria-label="Main navigation"><a href="/">Public website</a></nav></header>
+  <main><section class="panel form-panel">
+    <h1>Staff login</h1><p class="muted">Authorized staff only.</p>
+    <form id="login-form">
+      <label for="email">Staff email<input id="email" name="email" type="email" autocomplete="username" maxlength="254" required></label>
+      <label for="password">Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Sign in</button><p id="login-status" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </section></main>
+  <script src="/js/login.js"></script>
+</body>
+</html>
