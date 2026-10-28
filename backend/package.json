@@ -9,7 +9,9 @@
     "dev": "node --watch src/server.js",
     "create-admin": "node scripts/create-admin.js"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-sqlite3": "^0.9.13",
@@ -18,6 +20,7 @@
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
     "helmet": "^8.0.0",
+    "multer": "^2.5.0",
     "sqlite3": "^5.1.7"
   }
 }

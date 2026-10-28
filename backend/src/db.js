@@ -42,5 +42,36 @@ async function initDb() {
     is_read INTEGER NOT NULL DEFAULT 0,
     created_at TEXT NOT NULL DEFAULT (datetime('now'))
   )`);
+  await run(`CREATE TABLE IF NOT EXISTS admissions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    application_number TEXT NOT NULL UNIQUE,
+    student_full_name TEXT NOT NULL,
+    date_of_birth TEXT NOT NULL,
+    current_grade TEXT NOT NULL,
+    previous_school TEXT NOT NULL,
+    guardian_full_name TEXT NOT NULL,
+    guardian_relationship TEXT NOT NULL,
+    guardian_phone TEXT NOT NULL,
+    guardian_email TEXT,
+    home_address TEXT NOT NULL,
+    additional_notes TEXT,
+    status TEXT NOT NULL DEFAULT 'pending'
+      CHECK (status IN ('pending', 'under_review', 'accepted', 'rejected')),
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`);
+
+  await run(`CREATE TABLE IF NOT EXISTS admission_documents (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    admission_id INTEGER NOT NULL,
+    original_name TEXT NOT NULL,
+    stored_name TEXT NOT NULL UNIQUE,
+    mime_type TEXT NOT NULL,
+    file_size INTEGER NOT NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    FOREIGN KEY (admission_id)
+      REFERENCES admissions(id)
+            ON DELETE CASCADE
+  )`);
 }
+
 module.exports = { db, run, get, all, initDb };
