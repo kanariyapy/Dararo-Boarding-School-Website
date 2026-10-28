@@ -799,3 +799,854 @@ h2 {
         animation-duration: 0.01ms !important;
     }
 }
+
+
+
+
+
+
+
+
+/* =========================
+   1. General Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #07519a;
+    --primary-dark: #063b75;
+    --primary-light: #e6f3ff;
+    --accent: #2588ed;
+    --text: #173e70;
+    --muted: #607b9e;
+    --border: #d5e5f6;
+    --white: #ffffff;
+    --background: #f0f8ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* =========================
+   2. Navigation Bar
+========================= */
+
+.navbar {
+    background: linear-gradient(
+        100deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+    color: var(--white);
+    padding: 15px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+}
+
+
+.school-logo {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--primary);
+    border: 3px solid #b9dcff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.brand h1 {
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #dceaff;
+}
+
+.brand p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.brand small {
+    display: block;
+    margin-top: 3px;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 13px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #b9ddff;
+    border-bottom: 2px solid #b9ddff;
+}
+
+.apply-button {
+    background: var(--accent);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.apply-button:hover {
+    background: #1673ce;
+}
+
+/* =========================
+   3. Hero Section
+========================= */
+
+.hero {
+    min-height: 235px;
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+    color: var(--white);
+ background-image: url("https://images.squarespace-cdn.com/content/v1/63621cd0c1a00d734368b8da/8e174e38-996a-46a9-a3fd-d40648507258/ormiston-primary-2015-asc-architects+(7).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #d6eaff;
+}
+
+.hero h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero-content > p:last-child {
+    font-size: 16px;
+    max-width: 550px;
+}
+
+/* =========================
+   4. Main Layout
+========================= */
+
+.main-container {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 4%;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* =========================
+   5. Sidebar
+========================= */
+
+.sidebar {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(12, 78, 140, 0.06);
+}
+
+.sidebar-heading {
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+    padding: 22px 18px;
+    color: var(--white);
+}
+
+.sidebar-icon {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.sidebar-heading h2 {
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.benefit {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 18px 16px 5px;
+}
+
+.benefit-icon {
+    min-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.benefit h3 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.benefit p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.motto {
+    margin: 20px 15px;
+    padding: 18px 10px;
+    text-align: center;
+    background: #e4f2ff;
+    border-radius: 8px;
+}
+
+.motto p {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    transform: rotate(-3deg);
+}
+
+.help-box {
+    padding: 5px 18px 22px;
+}
+
+.help-box h3 {
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.help-box p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+/* =========================
+   6. Application Card
+========================= */
+
+.application-card {
+    min-width: 0;
+    background: var(--white);
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 22px rgba(12, 78, 140, 0.07);
+}
+
+.form-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.form-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.form-heading h2 {
+    color: var(--primary);
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.form-heading p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================
+   7. Section Headings
+========================= */
+
+.section-title {
+    background: linear-gradient(
+        90deg,
+        #dceeff,
+        #edf7ff
+    );
+    color: var(--primary);
+    padding: 10px 13px;
+    margin: 22px 0 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title span {
+    font-size: 17px;
+}
+
+/* =========================
+   8. Form Fields
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.form-group label span,
+.upload-description label span {
+    color: #e13b46;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #cedff1;
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 42px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8297b0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 136, 237, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* =========================
+   9. Document Upload Notice
+========================= */
+
+.notice {
+    background: #edf7ff;
+    color: #356b9e;
+    border-radius: 6px;
+    padding: 13px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.notice strong {
+    color: var(--primary);
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* =========================
+   10. File Upload List
+========================= */
+
+.upload-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.upload-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #dfebf8;
+    border-radius: 7px;
+    background: #fcfeff;
+    min-width: 0;
+    transition: border-color 0.2s ease;
+}
+
+.upload-item:hover {
+    border-color: var(--accent);
+}
+
+.upload-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: #e4f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.upload-description {
+    flex: 1;
+    min-width: 0;
+}
+
+.upload-description label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 3px;
+}
+
+.upload-description small {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.upload-item input[type="file"] {
+    width: 215px;
+    max-width: 42%;
+    min-width: 0;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.upload-item input[type="file"]::file-selector-button {
+    background: #edf5ff;
+    color: var(--primary);
+    border: 1px solid #c9dff6;
+    padding: 7px 9px;
+    border-radius: 4px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.upload-item input[type="file"]::file-selector-button:hover {
+    background: #dceeff;
+}
+
+/* =========================
+   11. Declaration
+========================= */
+
+.declaration {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 16px 0 20px;
+}
+
+.declaration input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    margin-top: 3px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.declaration label {
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+/* =========================
+   12. Form Buttons
+========================= */
+
+.form-actions {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 15px;
+}
+
+.form-actions button {
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.submit-button {
+    background: linear-gradient(
+        90deg,
+        #0868c5,
+        var(--primary)
+    );
+    border: none;
+    color: var(--white);
+}
+
+.submit-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.reset-button {
+    background: var(--white);
+    border: 1px solid #9bbbe0;
+    color: var(--primary);
+}
+
+.reset-button:hover {
+    background: #edf7ff;
+}
+
+/* =========================
+   13. Footer
+========================= */
+
+.footer {
+    background: linear-gradient(
+        100deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+    color: var(--white);
+    padding: 25px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand h2 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer-brand small {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.footer-info {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    font-size: 12px;
+}
+
+.copyright {
+    background: #042f60;
+    color: #d6eaff;
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+}
+
+/* =========================
+   14. Responsive Design
+========================= */
+
+@media (max-width: 1100px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .main-container {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .application-card {
+        padding: 18px;
+    }
+
+    .upload-item {
+        flex-wrap: wrap;
+    }
+
+    .upload-item input[type="file"] {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 54px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 10px 16px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .apply-button {
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 220px;
+        padding: 30px 5%;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero-content > p:last-child {
+        font-size: 14px;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 0 4%;
+        margin: 20px auto;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sidebar-heading {
+        grid-column: 1 / -1;
+    }
+
+    .motto,
+    .help-box {
+        align-self: center;
+    }
+
+    .application-card {
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .form-heading h2 {
+        font-size: 20px;
+    }
+
+    .upload-item {
+        flex-wrap: wrap;
+    }
+
+    .upload-item input[type="file"] {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 54px;
+    }
+
+    .form-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .school-logo {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 12px;
+    }
+
+    .brand small {
+        font-size: 9px;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-heading {
+        grid-column: auto;
+    }
+
+    .benefit {
+        padding: 14px;
+    }
+
+    .application-card {
+        padding: 12px;
+    }
+
+    .form-heading {
+        gap: 10px;
+    }
+
+    .form-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .upload-item {
+        gap: 8px;
+    }
+
+    .upload-item input[type="file"] {
+        margin-left: 0;
+    }
+}

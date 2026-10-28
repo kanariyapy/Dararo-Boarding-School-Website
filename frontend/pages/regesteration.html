@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | Dararo Boarding School</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="brand">
+            <div class="school-logo">📘</div>
+            <div>
+                <h1>DARARO</h1>
+                <p>BOARDING SCHOOL</p>
+                <small>Knowledge Builds a Brighter Future</small>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <a href="#application" class="apply-button">Apply Now</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="breadcrumb">Home &gt; Admissions &gt; Apply Now</p>
+            <h2>Student Application</h2>
+            <p>
+                Join Dararo Boarding School and become part of a
+                community that nurtures talent, builds character,
+                and shapes the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-heading">
+                <span class="sidebar-icon">🎓</span>
+                <h2>Why Choose<br>Dararo Boarding School?</h2>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">📚</div>
+                <div>
+                    <h3>Quality Education</h3>
+                    <p>We provide a comprehensive curriculum and support students to achieve their goals.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">👥</div>
+                <div>
+                    <h3>Safe &amp; Supportive Environment</h3>
+                    <p>Our boarding facilities encourage a safe, comfortable, and caring learning environment.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">⭐</div>
+                <div>
+                    <h3>Holistic Development</h3>
+                    <p>We support academic excellence, character building, and extracurricular activities.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">📖</div>
+                <div>
+                    <h3>Experienced Teachers</h3>
+                    <p>Our teachers are committed to helping every student succeed.</p>
+                </div>
+            </div>
+
+            <div class="motto">
+                <p>Together for a<br>Better Tomorrow</p>
+            </div>
+
+            <div class="help-box">
+                <h3>Application Help</h3>
+                <p>Need assistance with your application?</p>
+                <p>Contact the school admissions office for support.</p>
+            </div>
+
+        </aside>
+
+        <!-- Application Form -->
+        <section class="application-card" id="application">
+
+            <div class="form-heading">
+                <div class="form-icon">▤</div>
+                <div>
+                    <h2>Application Form</h2>
+                    <p>
+                        Fill in the form and upload the required documents
+                        to apply for admission to Dararo Boarding School.
+                    </p>
+                </div>
+            </div>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <!-- Student Information -->
+                <div class="section-title">
+                    <span>👤</span> 1. Student Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="studentName">Full Name <span>*</span></label>
+                        <input type="text" id="studentName" name="student_name"
+                               placeholder="Enter student's full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate">Date of Birth <span>*</span></label>
+                        <input type="date" id="birthDate" name="date_of_birth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender <span>*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grade">Grade Applying For <span>*</span></label>
+                        <select id="grade" name="grade" required>
+                            <option value="">Select grade</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Locatione <span>*</span></label>
+                        <select id="grade" name="grade" required>
+                            <option value="">Select locatione</option>
+                            <option value="7">a</option>
+                            <option value="8">b</option>
+                            <option value="9">c</option>
+                            <option value="10">d</option>
+                            <option value="11">e</option>
+                            <option value="12">f</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previousSchool">Previous School</label>
+                        <input type="text" id="previousSchool" name="previous_school"
+                               placeholder="Enter previous school name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentPhone">Student Phone Number</label>
+                        <input type="tel" id="studentPhone" name="student_phone"
+                               placeholder="Enter phone number">
+                    </div>
+
+                </div>
+
+                <!-- Parent Information -->
+                <div class="section-title">
+                    <span>👪</span> 2. Parent / Guardian Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fatherName">Father's Full Name <span>*</span></label>
+                        <input type="text" id="fatherName" name="father_name"
+                               placeholder="Enter father's full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motherName">Mother's Full Name <span>*</span></label>
+                        <input type="text" id="motherName" name="mother_name"
+                               placeholder="Enter mother's full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardianPhone">Parent / Guardian Phone <span>*</span></label>
+                        <input type="tel" id="guardianPhone" name="guardian_phone"
+                               placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter email address">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Home Address <span>*</span></label>
+                        <textarea id="address" name="address" rows="3"
+                                  placeholder="Enter your full address" required></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Required Documents -->
+                <div class="section-title">
+                    <span>📄</span> 3. Required Documents
+                </div>
+
+                <div class="notice">
+                    <strong>ⓘ</strong>
+                    Upload clear copies of the required documents.
+                    PDF, JPG, and PNG files are accepted. Maximum size:
+                    5 MB per file.
+                </div>
+
+                <div class="upload-list">
+
+                    <div class="upload-item">
+                        <div class="upload-icon">📄</div>
+                        <div class="upload-description">
+                            <label for="birthCertificate">Student's Birth Certificate <span>*</span></label>
+                            <small>PDF, JPG or PNG</small>
+                        </div>
+                        <input type="file" id="birthCertificate"
+                               name="birth_certificate"
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="upload-item">
+                        <div class="upload-icon">📄</div>
+                        <div class="upload-description">
+                            <label for="transcript">Previous School Leaving Certificate / Transcript <span>*</span></label>
+                            <small>PDF, JPG or PNG</small>
+                        </div>
+                        <input type="file" id="transcript" name="transcript"
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="upload-item">
+                        <div class="upload-icon">📑</div>
+                        <div class="upload-description">
+                            <label for="ministryResult">Ministry of Education Result <span>*</span></label>
+                            <small>PDF, JPG or PNG</small>
+                        </div>
+                        <input type="file" id="ministryResult"
+                               name="ministry_result"
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="upload-item">
+                        <div class="upload-icon">🪪</div>
+                        <div class="upload-description">
+                            <label for="parentId">Parent / Guardian ID (Both Sides) <span>*</span></label>
+                            <small>PDF, JPG or PNG</small>
+                        </div>
+                        <input type="file" id="parentId" name="parent_id"
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="upload-item">
+                        <div class="upload-icon">🖼️</div>
+                        <div class="upload-description">
+                            <label for="passportPhoto">Recent Passport-Size Photo <span>*</span></label>
+                            <small>JPG or PNG</small>
+                        </div>
+                        <input type="file" id="passportPhoto"
+                               name="passport_photo"
+                               accept=".jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="upload-item">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-description">
+                            <label for="otherDocuments">Other Supporting Documents</label>
+                            <small>Optional — PDF, JPG or PNG</small>
+                        </div>
+                        <input type="file" id="otherDocuments"
+                               name="other_documents"
+                               accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    </div>
+
+                </div>
+
+                <!-- Declaration -->
+                <div class="section-title">
+                    <span>✓</span> 4. Declaration
+                </div>
+
+                <div class="declaration">
+                    <input type="checkbox" id="declaration"
+                           name="declaration" required>
+                    <label for="declaration">
+                        I confirm that the information provided is accurate
+                        and complete to the best of my knowledge. I understand
+                        that the school may verify the submitted documents.
+                    </label>
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">
+                        ➤ Submit Application
+                    </button>
+
+                    <button type="reset" class="reset-button">
+                        ↻ Reset Form
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <div class="school-logo">📘</div>
+            <div>
+                <h2>DARARO</h2>
+                <p>BOARDING SCHOOL</p>
+                <small>Knowledge Builds a Brighter Future</small>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>📍 Dararo, Ethiopia</p>
+            <p>☎ Contact the school office</p>
+            <p>✉ Contact the admissions office</p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>&copy; 2026 Dararo Boarding School. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+
