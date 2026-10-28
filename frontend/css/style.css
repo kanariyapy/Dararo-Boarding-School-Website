@@ -914,3 +914,179 @@ button.danger {
     flex-direction: column;
   }
 }
+
+/* SCHOOL ACTIVITIES GALLERY */
+
+.gallery-section {
+  padding: 70px 5%;
+  background: #f5f7fb;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(16, 42, 86, 0.10);
+  transition: transform 0.25s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.gallery-item h3 {
+  padding: 0 18px 18px;
+  color: #102a56;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-section {
+    padding: 45px 5%;
+  }
+}
+
+/* SCHOOL ACTIVITIES GALLERY */
+.gallery-section {
+  padding: 70px 5%;
+  background: #f5f7fb;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  min-height: 180px;
+  margin-top: 35px;
+  padding: 20px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SCHOOL ACTIVITIES - FOUR BRANCHES */
+
+.gallery-section {
+  padding: 70px 5%;
+  background: #f5f7fb;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.activity-card {
+  display: block;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-top: 5px solid #102a56;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(16, 42, 86, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(16, 42, 86, 0.15);
+}
+
+.activity-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.activity-card h3 {
+  margin: 0 0 12px;
+  color: #102a56;
+  font-size: 24px;
+}
+
+.activity-card p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.activity-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #102a56;
+}
+
+.sports-card {
+  border-top-color: #198754;
+}
+
+.testimony-card {
+  border-top-color: #f28c28;
+}
+
+.cafe-card {
+  border-top-color: #102a56;
+}
+
+.learning-card {
+  border-top-color: #198754;
+}
+
+@media (max-width: 650px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card {
+    padding: 24px;
+  }
+}
+
+/* FIX EXTRA SPACE BELOW THE ACTIVITY GALLERY */
+.gallery-section {
+  padding-bottom: 20px !important;
+}
+
+.gallery-grid {
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
